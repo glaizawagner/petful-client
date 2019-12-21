@@ -1,18 +1,39 @@
 import React, { Component } from 'react';
-import SucessInfo from './SuccessInfo';
+import SuccessInfo from './SuccessInfo';
 
-class SucessStories extends Component {
-    renderSucessInfo(){
-        return <SucessInfo />
+class SuccessStories extends Component {
+    state = {
+        success: null
+    }
+
+    setSuccess = () => {
+        this.setState({
+            success: this.props.adoptedList
+        })
+    }
+
+    componentDidMount() {
+        this.setSuccess();
+    }
+
+    renderSuccessInfo(){
+        return this.state.success.map((animal, idx) => {
+            return <SuccessInfo key={idx} animal={animal}/>
+        })
     }
 
     render() {
+        console.log(this.props.adoptedList);
+
         return (
-            <div>
-                {this.renderSucessInfo()}
+            <div className='adopted-lists'>
+                <h2> Lists of adopted animals</h2>
+                <div className='adopted-info'>
+                    {this.state.success && this.renderSuccessInfo()}
+                </div>
             </div>
         )
     }
 }
 
-export default SucessStories;
+export default SuccessStories;

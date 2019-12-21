@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class SucessInfo extends Component {
+class SuccessInfo extends Component {
     render() {
         return(
             <div>
-                Animal Description
-                Owner of the animal
+                {<img src={this.props.animal.imgUrl} alt={this.props.animal.imgDesc}/>}
+                <p className='adoption-details'>{this.props.animal.animalName} was adopted by {this.props.animal.ownerName}</p>
             </div>
         )
     }
 }
 
-export default SucessInfo;
+export default SuccessInfo;

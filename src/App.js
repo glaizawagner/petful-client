@@ -14,6 +14,7 @@ class App extends Component {
         dog: [],
         cat: [],
         userList:[],
+        success: [],
         currentUser: '',
         user: 'YOU',
         links: [{name: 'Home', to: '/'}, {name: 'Adopt now', to: '/adopt'}, {name: 'Success Stories', to: '/lists-adopted'}]
@@ -49,6 +50,16 @@ class App extends Component {
                 })
         })
         .catch({error: 'An error has Occurred'})
+  }
+
+  setAllAdoptedList = () => {
+    ApiService.getAdoptedList()
+      .then(res => {
+        this.setState({
+          success: res
+        })
+      })
+      .catch({error: 'An error has Occurred'})
   }
 
   adoptCat = () => {
@@ -97,14 +108,30 @@ class App extends Component {
       })
   }
 
+  handleAddUser=(user) => {
+      this.setState({
+        userList: [ ...this.state.userList, user]
+      })
+  }
+
+  handleNextInLine = () =>{
+    this.setState({
+      userList: [...this.state.userList.slice(1)]
+    })
+    if(this.state.userList.length === 0){
+      this.setAllUsers();
+    }
+  }
+
   componentDidMount() {
     this.setFirstCat()
     this.setFirstDog()
     this.setAllUsers()
+    this.setAllAdoptedList()
 
-    setInterval(this.firstCat, 5000);
-    setInterval(this.setFirstDog, 5000);
-    setInterval(this.setAllUsers, 5000);
+    setInterval(this.setFirstCat, 15000);
+    setInterval(this.setFirstDog, 15000);
+    setInterval(this.handleNextInLine, 15000);
   }
 
   componentWillMount(){
@@ -114,39 +141,41 @@ class App extends Component {
 
   render() {
     // console.log(this.state.currentUser);
-    console.log(this.state.dog);
-    console.log(this.state.cat);
+    // console.log(this.state.dog);
+    // console.log(this.state.success);
     return (
       <Router>
           <div className='App'>
-            <Route render={(routeProps) => <TopNav curActive={routeProps.location} links={this.state.links}/>}/>
-          <main>
-            <Switch>
-                <Route path={'/adopt'} render={ () => {
-                  return <Adoption
-                    firstCat= {this.state.cat}
-                    firstDog = {this.state.dog}
-                    allUsers = {this.state.userList}
-                    petsData = {this.state}
-                    adoptCat={this.adoptCat}
-                    adoptDog={this.adoptDog}
-                    adoptBoth={this.adoptBoth}
-                    joinQueue={this.joinQueue}
-                  />
-                }}/>
-                 <Route path={'/lists-adopted'} render={ () => {
-                   return <Success />
-                 }} />
+              <Route render={(routeProps) => <TopNav curActive={routeProps.location} links={this.state.links}/>}/>
+            <main>
+              <Switch>
+                  <Route path={'/adopt'} render={ () => {
+                    return <Adoption
+                              firstCat= {this.state.cat}
+                              firstDog = {this.state.dog}
+                              allUsers = {this.state.userList}
+                              petsData = {this.state}
+                              adoptCat={this.adoptCat}
+                              adoptDog={this.adoptDog}
+                              adoptBoth={this.adoptBoth}
+                              handleAddUser={this.handleAddUser}
+                              joinQueue={this.joinQueue}
+                          />
+                    }}/>
+                  <Route path={'/lists-adopted'} render={ () => {
+                    return <Success 
+                              adoptedList = {this.state.success}     
+                            />
+                  }} />
 
-                <Route exact path={'/'} component={ () => <Home/>}/>
-            </Switch>
-          </main>
+                  <Route exact path={'/'} component={ () => <Home/>}/>
+              </Switch>
+            </main>
 
-          <footer className='footer'>
-                Copyright © 2019 Glaiza Wagner & Wesley Jacobs
-          </footer>
-          
-        </div> 
+            <footer className='footer'>
+                  Copyright © 2019 Glaiza Wagner & Wesley Jacobs
+            </footer>
+          </div> 
       </Router>
     )
   }

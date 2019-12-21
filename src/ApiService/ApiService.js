@@ -33,6 +33,14 @@ const ApiServices = {
             : res.json()
         )
     },
+    getAdoptedList() {
+        return fetch(`${config.API_ENDPOINT}/success`)
+        .then( res=> 
+            (!res.ok)
+            ? res.json().then(e=> Promise.reject(e))
+            : res.json()
+        )
+    },
     removeDog() {
         return fetch(`${config.API_ENDPOINT}/dog` ,
         {
