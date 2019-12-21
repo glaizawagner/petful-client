@@ -6,7 +6,7 @@ class TopNav extends Component {
     render() {
         return(
             <div className='nav'>
-               <h1> FIFO Pet Adaption Agency </h1>
+               <h1> FIFO Pet Adoption Agency </h1>
                 {this.props.links.map((link, index) =>
                 
                 <div className='links' key={index} onClick={() => window.scrollTo(0, 0)}>

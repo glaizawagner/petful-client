@@ -135,6 +135,11 @@ class App extends Component {
                 <Route exact path={'/'} component={ () => <Home/>}/>
             </Switch>
           </main>
+
+          <footer>
+                Copyright © 2019 Glaiza Wagner & Wesley Jacobs
+          </footer>
+          
         </div> 
       </Router>
     )
