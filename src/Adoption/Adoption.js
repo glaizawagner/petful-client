@@ -7,8 +7,10 @@ class Adoption extends Component {
         cat: [],
         dog: [],
         userList: [],
-        currentCat: null,
-        currentDog: null,
+        currUser: this.props.allUsers[0],
+        inputUser: 'not you',
+        // currentCat: null,
+        // currentDog: null,
         userInput: ''
     }
 
@@ -33,6 +35,9 @@ class Adoption extends Component {
         ev.preventDefault();
         let newUser = {userName: ev.target.userInput.value};
         this.props.handleAddUser(newUser);
+        this.setState({
+            inputUser: newUser
+        })
         ev.target.userInput.value = '';
     }
     componentDidMount() {
@@ -79,7 +84,7 @@ class Adoption extends Component {
             let gender = this.props.firstDog.sex;
             let age = this.props.firstDog.age;
             let breed = this.props.firstDog.breed;
-            let story = this.props.firstDog.story;
+            let story = this.props.firstDog.story; 
             return (
                 <div>
                     <img src={imgDog} alt='dog'></img>
@@ -95,6 +100,8 @@ class Adoption extends Component {
                 </div>
             )
         }
+
+        
     }
 
     renderBoth() {
@@ -148,7 +155,7 @@ class Adoption extends Component {
 
     renderAllUser() {
         let users = this.props.allUsers;
-        console.log(users);
+        //console.log(users);
         return users.map(user => {
             if(!user){
                 user = ' '
