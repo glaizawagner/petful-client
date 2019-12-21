@@ -1,7 +1,7 @@
 {
     "version": 2,
     "name": "Petful-Client",
-    "alias": "Petful-Client",
+    "alias": "Petful-Client-Glaiza-Wesley",
     "routes": [
       {
         "src": "^/static/(.*)",
