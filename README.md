@@ -10,7 +10,7 @@ FIFO Adoption Agency adopts animals such as dogs and cats that have been rescued
 
 For people who are interested to adopt, they can see the complete details of the cat, dog, or cat/dog pair that is ready for adoption as well as the people who are next in line for adoption. They can add their name so that it will be added to the queue as the next prospective owner.
 
-## Technology used:
+## Technologies
 - HTML
 - CSS
 - Javascript
