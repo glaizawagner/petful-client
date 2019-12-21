@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './HomePage/HomePage';
 import Adoption from './Adoption/Adoption';
-import ApiService from './ApiService/ApiSerive';
+import ApiService from './ApiService/ApiService';
 import TopNav from './TopNav/TopNav';
 import Success from './SuccessStories/SuccessStories'
 import './App.css';
@@ -114,7 +114,8 @@ class App extends Component {
 
   render() {
     // console.log(this.state.currentUser);
-    // console.log(this.state.userList);
+    console.log(this.state.dog);
+    console.log(this.state.cat);
     return (
       <Router>
           <div className='App'>
