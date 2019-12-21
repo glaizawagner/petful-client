@@ -72,16 +72,17 @@ class Adoption extends Component {
             let breed = this.props.firstCat.breed;
             let story =  this.props.firstCat.story;
             return (
-                <div className='render-cat'>
+                <div>
                     <img src={imgCat} alt='cat'></img>
                     <span className='animal-desc'>“{imgDesc}“</span>
-                    <h3>Name: {catName}</h3>
-                    
-                    <p>Story: {story}</p>
-                    <span>Gender: {gender}</span>
-                    <span> | </span>
-                    <span>Age: {age}</span>
-                    <p>Breed: {breed}</p>
+                    <div className='render-animals'>
+                        <span>Name: <h3 className='animal-name'>{catName}</h3></span>
+                        <p>Story: {story}</p>
+                        <span>Gender: {gender}</span>
+                        <span> | </span>
+                        <span>Age: {age}</span>
+                        <p>Breed: {breed}</p>
+                    </div>
                 </div>
             )
         }
@@ -101,12 +102,14 @@ class Adoption extends Component {
                 <div>   
                     <img src={imgDog} alt='dog'></img>
                     <span className='animal-desc'>“{imgDesc}“</span>
-                    <h3>Name: {dogName}</h3>
-                    <p>Story: {story}</p>
-                    <span>Gender: {gender}</span>
-                    <span> | </span>
-                    <span>Age: {age}</span>
-                    <p>Breed: {breed}</p>
+                    <div className='render-animals'>
+                        <span>Name: <h3 className='animal-name'>{dogName}</h3></span>
+                        <p>Story: {story}</p>
+                        <span>Gender: {gender}</span>
+                        <span> | </span>
+                        <span>Age: {age}</span>
+                        <p>Breed: {breed}</p>
+                    </div>
                 </div>
             )
         }
@@ -135,21 +138,26 @@ class Adoption extends Component {
                     <div>
                         <img src={imgDog} alt='dog'></img>
                         <span className='animal-desc'>“{dimgDesc}“</span>
-                        <h3>Name: {dogName}</h3>
-                        <p>Story: {dstory}</p>
-                        <span>Gender: {dgender}</span>
-                        <span> | </span>
-                        <span>Age: {dage}</span>
-                        <p>Breed: {dbreed}</p>
+                        <div className='render-animals'>
+                            <span>Name: <h3 className='animal-name'>{dogName}</h3></span>
+                            <p>Story: {dstory}</p>
+                            <span>Gender: {dgender}</span>
+                            <span> | </span>
+                            <span>Age: {dage}</span>
+                            <p>Breed: {dbreed}</p>
+                        </div>
 
                         <img src={imgCat} alt='cat'></img>
                         <span className='animal-desc'>“{imgDesc}“</span>
-                        <h3>Name: {catName}</h3>
-                        <p>Story: {story}</p>
-                        <span>Gender: {gender}</span>
-                        <span> | </span>
-                        <span>Age: {age}</span>
-                        <p>Breed: {breed}</p>
+                        <div className='render-animals'>
+                            <span>Name: <h3 className='animal-name'>{catName}</h3></span>
+                            <p>Story: {story}</p>
+                            <span>Gender: {gender}</span>
+                            <span> | </span>
+                            <span>Age: {age}</span>
+                            <p>Breed: {breed}</p>
+                        </div>
+                       
                     </div>
                 
             )

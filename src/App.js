@@ -4,6 +4,7 @@ import Home from './HomePage/HomePage';
 import Adoption from './Adoption/Adoption';
 import ApiService from './ApiService/ApiSerive';
 import TopNav from './TopNav/TopNav';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -136,7 +137,7 @@ class App extends Component {
             </Switch>
           </main>
 
-          <footer>
+          <footer className='footer'>
                 Copyright © 2019 Glaiza Wagner & Wesley Jacobs
           </footer>
           

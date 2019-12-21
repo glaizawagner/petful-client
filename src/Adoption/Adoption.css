@@ -12,25 +12,47 @@
     flex-direction: row;
     justify-content: space-between;
 }
-img {
+
+/* .render-animals:not(img):not(.animal-desc){
+    margin-left: 15rem;
+} */
+
+/* img {
     display: block;
-    width: 75%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
-}
-.animal-desc:before {
-    
-}
-.animal-desc:after {
-
 }
 
 .animal-desc {
     display: table;
     margin: 0 auto;
+} */
+
+img, .animal-desc {
+    margin-top: 1rem;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 1rem;
 }
+
+.render-animals{
+    margin-top: 1rem;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding: 0;
+}
+
+
 .users-list {
     margin-left: 1rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.animal-name{
+    display: inline;
 }
