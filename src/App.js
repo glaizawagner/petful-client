@@ -4,6 +4,7 @@ import Home from './HomePage/HomePage';
 import Adoption from './Adoption/Adoption';
 import ApiService from './ApiService/ApiSerive';
 import TopNav from './TopNav/TopNav';
+import Success from './SuccessStories/SuccessStories'
 import './App.css';
 
 class App extends Component {
@@ -15,7 +16,7 @@ class App extends Component {
         userList:[],
         currentUser: '',
         user: 'YOU',
-        links: [{name: 'Home', to: '/'}, {name: 'Adopt now', to: '/adopt'}]
+        links: [{name: 'Home', to: '/'}, {name: 'Adopt now', to: '/adopt'}, {name: 'Success Stories', to: '/lists-adopted'}]
     }
   }
   
@@ -132,6 +133,9 @@ class App extends Component {
                     joinQueue={this.joinQueue}
                   />
                 }}/>
+                 <Route path={'/lists-adopted'} render={ () => {
+                   return <Success />
+                 }} />
 
                 <Route exact path={'/'} component={ () => <Home/>}/>
             </Switch>
