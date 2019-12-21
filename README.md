@@ -1,4 +1,4 @@
-# Project Name: FIFO Adoption Agency
+## Project Name: FIFO Adoption Agency
 
 It is a collaboration between Glaiza Wagner and Wesley Jacobs.
 
@@ -17,4 +17,4 @@ For people who are interested to adopt, they can see the complete details of the
 - React
 - Deployed in Zeit
 
-Copyright © 2019
+Copyright G©W 2019
