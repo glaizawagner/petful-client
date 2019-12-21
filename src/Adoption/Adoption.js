@@ -28,12 +28,12 @@ class Adoption extends Component {
         })
     }
 
-    handleNextCat = () => {
-        this.setState({
-            currentCat: this.state.petsData.firstCat
-        })
+    // handleNextCat = () => {
+    //     this.setState({
+    //         currentCat: this.state.petsData.firstCat
+    //     })
         
-    }
+    // }
 
     handleJoin = (ev) => {
         ev.preventDefault();
