@@ -13,7 +13,7 @@ class Adoption extends Component {
     }
 
     setUserInput = (ev) => {
-        this.setState({userInput: ev.target.userinput.value})
+        this.setState({userInput: ev.target.userInput.value})
     }
 
     handleOptionChange = (ev) => {
@@ -28,16 +28,16 @@ class Adoption extends Component {
         })
     }
 
-    handleNextCat = () => {
-        this.setState({
-            currentCat: this.state.petsData.firstCat
-        })
+    // handleNextCat = () => {
+    //     this.setState({
+    //         currentCat: this.state.petsData.firstCat
+    //     })
         
-    }
+    // }
 
     handleJoin = (ev) => {
         ev.preventDefault();
-        console.log('input' + ev.target.userinput.value)
+        console.log('input' + ev.target.userInput.value)
         console.log('submitted' + this.state.userInput)
         // ev.preventDefault();
         let newUser = this.state.userInput;
@@ -196,7 +196,7 @@ class Adoption extends Component {
                             <div >
                                 {/* <button type='button' onClick={this.handleAllUsers}>List in Queue</button> */}
                                 <button type='submit' onSubmit={e => this.handleJoin(e)}>Add me to Queue</button>
-                                <input type='text'  name='userinput' placeholder='Enter your name' required></input>
+                                <input type='text'  name='userInput' placeholder='Enter your name' required></input>
                             </div>
                         </div>
                 </fieldset>
