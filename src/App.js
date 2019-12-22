@@ -17,7 +17,7 @@ class App extends Component {
         success: [],
         currentUser: '',
         user: 'YOU',
-        links: [{name: 'Home', to: '/'}, {name: 'Adopt now', to: '/adopt'}, {name: 'Success Stories', to: '/lists-adopted'}]
+        links: [{name: 'Home', to: '/'}, {name: 'Adopt Now', to: '/adopt'}, {name: 'Success Stories', to: '/lists-adopted'}]
     }
   }
   
@@ -140,13 +140,13 @@ class App extends Component {
 
 
   render() {
-    // console.log(this.state.currentUser);
-    // console.log(this.state.dog);
-    // console.log(this.state.success);
     return (
       <Router>
           <div className='App'>
+            <div>
               <Route render={(routeProps) => <TopNav curActive={routeProps.location} links={this.state.links}/>}/>
+            </div>
+              
             <main>
               <Switch>
                   <Route path={'/adopt'} render={ () => {

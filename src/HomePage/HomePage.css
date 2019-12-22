@@ -1,0 +1,71 @@
+
+.title {
+    font-family: cursive;
+    text-align: left;
+}
+.welcome {
+    font-family: 'fantasy'; 
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.intro {
+    font-family: 'cursive'; 
+    font-size: 1rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.adoption {
+    font-family: 'Trebuchet MS';
+    margin: 0 20%;
+    padding: 1rem 1rem;
+}
+
+.process {
+    border: 2px solid black;
+    border-radius: 1rem;
+    margin: 0 20%;
+    padding: 1rem 2rem;
+    font-family: 'Trebuchet MS';
+    font-size: 1rem;
+}
+
+.btn-adopt {
+    margin-top: 3rem;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 1rem 1rem;
+    text-transform: uppercase;
+    border-color: purple;
+    box-shadow: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: orange;
+    opacity: 0.5;
+    color: purple;
+    opacity: 1;
+    float: right;
+}
+
+.btn-adopt:hover {
+    background-color: purple;
+    color: orange;
+    border-color: white;
+}
+.review {
+    text-indent: 3.5rem;
+}
+
+.paw {
+    color: purple;
+}
+
+.happy {
+    margin-top: 3rem;
+    font-weight: 700;
+}
+
+.step {
+    font-weight: 700;
+}

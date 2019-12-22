@@ -59,7 +59,7 @@ class Adoption extends Component {
             let breed = this.props.firstCat.breed;
             let story = this.props.firstCat.story;
             return (
-                <div>
+                <div className='animal-details'>
                     <img src={imgCat} alt='cat'></img>
                     <span className='animal-desc'>“{imgDesc}“</span>
                     <div className='render-animals'>
@@ -86,7 +86,7 @@ class Adoption extends Component {
             let breed = this.props.firstDog.breed;
             let story = this.props.firstDog.story; 
             return (
-                <div>
+                <div className='animal-details'>
                     <img src={imgDog} alt='dog'></img>
                     <span className='animal-desc'>“{imgDesc}“</span>
                     <div className='render-animals'>
@@ -124,7 +124,7 @@ class Adoption extends Component {
             let story = this.props.firstCat.story;
 
             return (
-                <div>
+                <div className='animal-details'>
                     <img src={imgDog} alt='dog'></img>
                     <span className='animal-desc'>“{dimgDesc}“</span>
                     <div className='render-animals'>
@@ -138,7 +138,7 @@ class Adoption extends Component {
 
                     <img src={imgCat} alt='cat'></img>
                     <span className='animal-desc'>“{imgDesc}“</span>
-                    <div className='render-animals'>
+                    <div className='render-animals animals-details'>
                         <span>Name: <h3 className='animal-name'>{catName}</h3></span>
                         <p>Story: {story}</p>
                         <span>Gender: {gender}</span>
@@ -160,7 +160,7 @@ class Adoption extends Component {
             if(!user){
                 user = ' '
             } else {
-               return <div>{user.userName}</div>
+               return <div class='username'>{user.userName}</div>
             }
      })
     }
@@ -182,15 +182,15 @@ class Adoption extends Component {
                             </div>
                         <div >
                             {/* <button type='button' onClick={this.handleAllUsers}>List in Queue</button> */}
-                            <button type='submit'>Add me to Queue</button>
-                            <input type='text' name='userInput' placeholder='Enter your name' required></input>
+                            <button type='submit' className='btn-add'>Add me to the Queue</button>
+                            <input type='text' name='userInput' className='userInput' placeholder='Enter your name' required></input>
                         </div>
                     </div>
                     </form>
                 </fieldset>
 
                 <section className='users-list'>
-                    This is the line:
+                    <div className='next'>Next in line:</div>
                      {this.renderAllUser()}
                      </section>
 

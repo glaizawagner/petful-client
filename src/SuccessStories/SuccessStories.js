@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SuccessInfo from './SuccessInfo';
+import './SuccessStories.css'
 
 class SuccessStories extends Component {
     state = {
@@ -27,7 +28,7 @@ class SuccessStories extends Component {
 
         return (
             <div className='adopted-lists'>
-                <h2> Lists of adopted animals</h2>
+                <h2 className='l-adopted'> Lists of adopted animals</h2>
                 <div className='adopted-info'>
                     {this.state.success && this.renderSuccessInfo()}
                 </div>
