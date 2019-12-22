@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SuccessInfo.css';
 
 class SuccessInfo extends Component {
     render() {

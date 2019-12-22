@@ -16,6 +16,8 @@ For people who are interested to adopt, they can see the complete details of the
 - CSS
 - Javascript
 - React
-- Deployed in Zeit
+
+Client - Deployed in Zeit
+Server - Deployed in Heroku
 
 Copyright G©W 2019

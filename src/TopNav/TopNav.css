@@ -1,5 +1,43 @@
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.animals {
+    font-size: 2.5rem;
+    color: orange;
+}
+
 .links {
-    display: inline-block;
-    padding: 0 1rem;
-    text-align: center;
+    padding-left: 2.2rem;  
+    float: left;
+}
+
+.links:first-child {
+    margin-left: 5rem;
+}
+.link1:hover {
+    color: purple;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.link1 {
+    font-family: 'Trebuchet MS';
+    color: Black;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transform: translateY(-4px);
+}
+
+.logo-title {
+    font-family: fantasy;
+    font-size: 3rem;
+    font-weight: 900;
+    color: purple;
 }
