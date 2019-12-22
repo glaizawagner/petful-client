@@ -1,7 +1,9 @@
 
+.title-welcome {
+    text-align: center;
+}
 .title {
     font-family: cursive;
-    text-align: left;
 }
 .welcome {
     font-family: 'fantasy'; 

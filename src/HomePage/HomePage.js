@@ -8,7 +8,7 @@ class HomePage extends Component {
     render() {
         return(
             <div className='home'>
-                <h1 className='title'> <span className='welcome'>Welcome to Petful</span> <span className='intro'>an agency where you can adopt an animal.</span></h1>
+                <span className='title-welcome'><h1 className='title'> <span className='welcome'>Welcome to Petful</span> <span className='intro'>an agency where you can adopt an animal.</span></h1></span>
                 
                 <h2 className='adoption'> Adoption Process</h2>
                 <div className='process'>
@@ -17,7 +17,7 @@ class HomePage extends Component {
                     <p className='review'>Review the people who are next in line to adopt.</p> 
                     <p><span className='step'>Step 3:</span> Click 'Add me to Queue' if you are interested to adopt.</p>
                     <p><span className='step'>Step 4:</span> It's a First Come First Serve! This not only works for people who want to adopt, but also in our animal list.</p>
-                    <div class='happy'><FontAwesomeIcon icon={faPaw} className='paw'/> Happy Adopting <FontAwesomeIcon icon={faPaw} className='paw'/></div>
+                    <div className='happy'><FontAwesomeIcon icon={faPaw} className='paw'/> Happy Adopting <FontAwesomeIcon icon={faPaw} className='paw'/></div>
                     <Link to= '/adopt'>
                         <button type='button' className='btn-adopt'>Start Adopting!</button>
                     </Link>
