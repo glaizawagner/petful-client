@@ -2,9 +2,9 @@
 
 It is a collaboration between Glaiza Wagner and Wesley Jacobs.
 
-Live app : [Petful-Client](https://petful-client-glaiza-wesley.now.sh)\
-Heroku   : [Petful-Server](https://petful-server-glaiza-wesley.herokuapp.com/)\
-Repo     : [Github-link](https://github.com/glaizawagner/petful-client)
+* Live app : [Petful-Client](https://petful-client-glaiza-wesley.now.sh)\
+* Heroku   : [Petful-Server](https://petful-server-glaiza-wesley.herokuapp.com/)\
+* Github   : [Repo-link](https://github.com/glaizawagner/petful-client)
 
 ## About this project
 
