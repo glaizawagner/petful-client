@@ -2,7 +2,8 @@
 
 It is a collaboration between Glaiza Wagner and Wesley Jacobs.
 
-Live app: [Petful-Client](...todo...)
+Live app : [Petful-Client](https://petful-client-glaiza-wesley.now.sh)
+Heroku   : [Petful-Server](https://petful-server-glaiza-wesley.herokuapp.com/)
 
 ## About this project
 
