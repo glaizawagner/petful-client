@@ -7,15 +7,21 @@
     padding-left: 1rem;
 }
 
+#navLinksBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .animals {
     font-size: 2.5rem;
     color: orange;
 }
 
-.links {
+/* .links {
     padding-left: 2.2rem;  
     float: left;
-}
+} */
 
 .links:first-child {
     margin-left: 5rem;
@@ -29,7 +35,7 @@
 
 .link1 {
     font-family: 'Trebuchet MS';
-    color: Black;
+    color:black;
     font-size: 1.3rem;
     font-weight: 600;
     transform: translateY(-4px);

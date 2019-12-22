@@ -14,11 +14,11 @@
     padding: .5rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
 fieldset {
-    
     font-family: Trebuchet Ms;
     border-radius: 5px;
     border-color: orange;

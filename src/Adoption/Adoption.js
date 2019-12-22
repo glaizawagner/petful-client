@@ -158,7 +158,7 @@ class Adoption extends Component {
         //console.log(users);
         return users.map(user => {
             if(!user){
-                user = ' '
+                return user = ' ';
             } else {
                return <div class='username'>{user.userName}</div>
             }

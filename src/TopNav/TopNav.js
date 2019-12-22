@@ -15,7 +15,7 @@ class TopNav extends Component {
                     <FontAwesomeIcon icon={faDog} className='logo animals'/> 
                     
                </div>
-            
+            <div id='navLinksBox'>
                 {this.props.links.map((link, index) =>
                 
                 <div className='links' key={index} onClick={() => window.scrollTo(0, 0)}>
@@ -23,7 +23,9 @@ class TopNav extends Component {
                         className={(link.to === this.props.curActive.pathname)
                         ? 'active' : ''}><div className='link1'>{link.name}</div>
                     </Link>
-                </div>)}
+                    </div>
+                )}
+                </div>
             </div>
         );
     }
